@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', ['ngAnimate']);
 
 myApp.controller('FirstController', ['$scope', '$http', function($scope, $http){
 
@@ -8,5 +8,4 @@ myApp.controller('FirstController', ['$scope', '$http', function($scope, $http){
         });
     };
 
-    $scope.getData();
 }]);

@@ -3,18 +3,23 @@
     <head>
         <meta charset="utf-8">
         <title>Angular</title>
-    <script type="text/javascript" src="/assets/vendors/angular.min.js"></script>
-    <script type="text/javascript" src="/assets/scripts/client-app.js"></script>
+            <link rel="stylesheet" href="/assets/styles/style.css" />
+            <script type="text/javascript" src="/assets/vendors/angular.min.js"></script>
+            <script type="text/javascript" src="/assets/vendors/angular-animate.min.js"></script>
+            <script type="text/javascript" src="/assets/scripts/client-app.js"></script>
     </head>
 
     <body>
         <div ng-controller="FirstController">
             <h1>People Getter!</h1>
+            <button class="button" ng-click="getData()">Get the Peeps!</button>
             <div ng-repeat="(name, person) in listAll">
                 {{ name }}
+                <br />
                 <a ng-href="{{ person.github }}">
-                    <img ng-src="{{ person.image }}" />
+                    <img ng-src="{{ person.image }}" height="200px"/>
                 </a>
+                <br />
             </div>
         </div>
     </body>
